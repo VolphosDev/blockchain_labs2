@@ -11,6 +11,7 @@ contract Storage {
 
     uint256 number; //este e mi comentario de una sola línea
 
+    //perú campeón 2026
     /*
     Este es un comentario 
     multi
