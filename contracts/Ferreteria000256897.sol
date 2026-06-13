@@ -36,4 +36,17 @@ contract Ferreteria000256897 {
     function contarElementos() public view firmaAuditoria returns (uint256) {
         return inventario.length;
     }
+
+    function inactivarElemento(uint _posicion) public firmaAuditoria {
+        require(_posicion < inventario.length, "Error: La posicion no existe");
+        inventario[_posicion].estado = false;
+    }
+
+    function mostrarImpares() public view firmaAuditoria {
+        for(uint i = 0; i < inventario.length; i++) {
+            if (inventario[i].id % 2 != 0) {
+                console.log("Herramienta impar: ", inventario[i].id, inventario[i].nombre);
+            }
+        }
+    }
 }
